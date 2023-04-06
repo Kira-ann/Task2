@@ -6,15 +6,6 @@ public class Main {
     public static void main(String[] args) throws IOException {
         Parser parser = new Parser();
         parser.launch(args);
-        String string = "z6h2fh";
-        String fileName = args[0];
-
-        //Optional<String> line = Files.lines(Paths.get(fileName)).findFirst();
-        //System.out.println(line.get());
-        //System.out.println(packaged(line.get()));
-        //input(args, string);
-        //unpacking(line.get());
-        //System.out.println(line.get());
     }
     private static void input(String[] args, String str) {
         try (FileWriter writer = new FileWriter(args[0], false)) {
