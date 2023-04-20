@@ -23,11 +23,10 @@ public class Parser {
 
     public void launch(String[] args) {
         CmdLineParser parser = new CmdLineParser(this);
-
         try {
             parser.parseArgument(args);
-            Main h = new Main();
-            h.solve(inputFile, unpack, pack, outputFile);
+            Main h = new Main(inputFile);
+            h.solve(unpack, pack, outputFile);
         } catch (CmdLineException e) {
             System.err.println(e.getMessage());
             parser.printUsage(System.err);
